@@ -1,3 +1,5 @@
+import cv from "../../assets/cv.pdf";
+
 function NavMobile({ isOpen, onLinkClick, activeSection }) {
   return (
     <div
@@ -37,7 +39,7 @@ function NavMobile({ isOpen, onLinkClick, activeSection }) {
           <li>
             <a
               className="resume mybtn-outline"
-              href="/CV.pdf"
+              href={cv}
               download="CV - Muhammad Ega Dermawan.pdf"
               target="_blank"
               rel="noopener noreferrer"

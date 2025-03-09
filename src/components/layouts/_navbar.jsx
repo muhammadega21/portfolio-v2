@@ -1,6 +1,7 @@
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { useState } from "react";
 import NavMobile from "./_navMobile";
+import cv from "../../assets/cv.pdf";
 
 function Navbar() {
   const [isHidden, setIsHidden] = useState(false);
@@ -97,7 +98,7 @@ function Navbar() {
           </a>
           <a
             className="resume mybtn-outline"
-            href="/CV"
+            href={cv}
             download="CV - Muhammad Ega Dermawan.pdf"
             target="_blank"
             rel="noopener noreferrer"
