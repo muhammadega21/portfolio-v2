@@ -1,7 +1,7 @@
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { useState } from "react";
 import NavMobile from "./_navMobile";
-import cv from "../../assets/cv.pdf";
+import cv from "../../assets/CV.pdf";
 
 function Navbar() {
   const [isHidden, setIsHidden] = useState(false);

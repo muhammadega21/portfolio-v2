@@ -1,4 +1,4 @@
-import cv from "../../assets/cv.pdf";
+import cv from "../../assets/CV.pdf";
 
 function NavMobile({ isOpen, onLinkClick, activeSection }) {
   return (
