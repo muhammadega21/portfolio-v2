@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@plugin "daisyui";
+/* @plugin "daisyui" {
+  themes: light --default, dark --prefersdark;
+} */
+@plugin "daisyui" {
+  themes: dark --default;
+}
+
+@layer components {
+  .mybtn-outline {
+    @apply btn btn-outline border-(--color-primary) text-(--color-primary) bg-transparent hover:tracking-widest hover:border-r-4 transition-all duration-200 hover:shadow-[0px_0px_10px_var(--color-primary)];
+  }
+}
