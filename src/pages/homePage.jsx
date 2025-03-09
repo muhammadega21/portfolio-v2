@@ -1,5 +1,5 @@
-import Navbar from "../components/layouts/navbar";
-import Footer from "../components/layouts/footer";
+import Navbar from "../components/layouts/navbarLayout";
+import Footer from "../components/layouts/footerLayout";
 import { tabTitle } from "../utils/generalFunctions";
 import { About, Contact, Home, Project } from "../components/homeLayouts";
 import { ScrollTop } from "primereact/scrolltop";
