@@ -1,5 +1,5 @@
-import Footer from "../components/layouts/footerLayout";
-import Navbar from "../components/layouts/navbarLayout";
+import Footer from "../components/layouts/_footer";
+import Navbar from "../components/layouts/_navbar";
 import { tabTitle } from "../utils/generalFunctions";
 
 function ProjectPage() {
