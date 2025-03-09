@@ -1,8 +1,8 @@
 import Aos from "aos";
 import "aos/dist/aos.css";
-import Particles from "../particles";
-import RotatingText from "../RotatingText";
-import SplitText from "./../SplitText";
+import Particles from "../_Particles";
+import RotatingText from "../_RotatingText";
+import SplitText from "../_SplitText";
 
 function Home() {
   Aos.init();
