@@ -171,15 +171,6 @@ section {
   opacity: 0.6;
 }
 
-.tech span {
-  display: inline-flex;
-  flex-direction: column;
-}
-
-.tech .icon {
-  font-size: 2rem;
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;

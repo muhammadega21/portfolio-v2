@@ -8,7 +8,6 @@ import {
   faLaravel,
   faNode,
   faPhp,
-  faPython,
   faReact,
 } from "@fortawesome/free-brands-svg-icons";
 function About() {
@@ -20,7 +19,7 @@ function About() {
           <h1>Introduction & Tech I Use</h1>
         </div>
         <div className="mt-10">
-          <div className="flex flex-col-reverse sm:flex-row gap-15 sm:gap-30 justify-between items-center">
+          <div className="flex flex-col-reverse lg:flex-row gap-15 lg:gap-30 justify-between items-center">
             <div className="text-justify opacity-90 ">
               <p>
                 Hello! I&apos;m Muhammad Ega Dermawan, a front-end web developer
@@ -53,7 +52,7 @@ function About() {
               />
             </div>
           </div>
-          <div className="tech">
+          <div className="tech  mt-10 lg:mt-20 flex flex-wrap justify-center gap-x-3 md:gap-x-10 gap-y-3 sm:gap-y-10 px-0 lg:px-20">
             <span>
               <FontAwesomeIcon icon={faHtml5} className="icon" />
               HTML5
@@ -69,10 +68,6 @@ function About() {
             <span>
               <FontAwesomeIcon icon={faPhp} className="icon" />
               PHP
-            </span>
-            <span>
-              <FontAwesomeIcon icon={faPython} className="icon" />
-              Python
             </span>
             <span>
               <FontAwesomeIcon icon={faNode} className="icon" />

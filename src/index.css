@@ -27,4 +27,12 @@
   .title-card:hover::before {
     @apply border-[#00cdb9] border-4 shadow-[0px_0px_25px_#00cdb9];
   }
+
+  .tech span {
+    @apply inline-flex flex-col gap-2 text-lg font-semibold items-center cursor-pointer text-(--color-background) min-w-40 sm:min-w-45 max-w-40 sm:max-w-45 w-auto rounded-md py-5 sm:py-6 bg-white;
+  }
+
+  .tech .icon {
+    @apply w-max text-5xl sm:text-8xl;
+  }
 }
