@@ -30,7 +30,8 @@ body {
 }
 
 section {
-  height: 100dvh;
+  min-height: 100dvh;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -73,7 +74,7 @@ section {
 }
 
 .socialLink {
-  position: absolute;
+  position: fixed;
   left: 3%;
   bottom: 0;
   z-index: 50;
@@ -103,7 +104,7 @@ section {
 }
 
 .emailLink-parent {
-  position: absolute;
+  position: fixed;
   right: 3%;
   bottom: 0;
   z-index: 50;
@@ -130,6 +131,53 @@ section {
 .emailLink:hover {
   color: var(--color-primary);
   transform: translateY(-3px);
+}
+
+.title-card::before {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  top: 15px;
+  left: 15px;
+  height: 100%;
+  width: 100%;
+  /* border: 4px solid #00cdb9a2; */
+  /* box-shadow: 0px 0px 3px var(--color-primary); */
+  transition: 0.3s ease-in-out;
+}
+
+.title-card:hover::before {
+  top: 20px;
+  left: 20px;
+  /* border: 4px solid #00cdb9; */
+  /* box-shadow: 0px 0px 25px var(--color-primary); */
+}
+
+.section-title h2 {
+  /* text-indent: 10px; */
+  padding-left: 2em;
+}
+
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 1.5em;
+  height: 1px;
+  border-radius: 4px;
+  background: #fff;
+  opacity: 0.6;
+}
+
+.tech span {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.tech .icon {
+  font-size: 2rem;
 }
 
 @keyframes fadeIn {

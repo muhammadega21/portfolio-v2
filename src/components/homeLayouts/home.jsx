@@ -20,7 +20,7 @@ function Home() {
           disableRotation={false}
         />
       </div>
-      <div className="h-full w-max pt-[80px] px-[10%] flex items-center ">
+      <div className="h-screen w-max py-0 sm:py-[80px] px-[5%] sm:px-[10%] flex items-center">
         <div>
           <div
             className="w-max mb-4"
