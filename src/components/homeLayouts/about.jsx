@@ -89,12 +89,15 @@ function About() {
             {techItems.map((item, index) => (
               <motion.span
                 key={item.label}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
+                initial={{ opacity: 0, y: "100%" }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <FontAwesomeIcon icon={item.icon} className="icon" />
+                <FontAwesomeIcon
+                  icon={item.icon}
+                  className="icon transition-all duration-200"
+                />
                 {item.label}
               </motion.span>
             ))}

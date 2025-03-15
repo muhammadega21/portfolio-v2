@@ -7,7 +7,7 @@ function SocialLink() {
     viewport: { once: true },
   };
   return (
-    <motion.div className="socialLink" {...animateFadeUp}>
+    <motion.div className="socialLink hidden sm:flex" {...animateFadeUp}>
       <a href="https://github.com/muhammadega21" target="_blank">
         <i className="ri-github-line "></i>
       </a>
