@@ -12,8 +12,6 @@ import {
   faReact,
 } from "@fortawesome/free-brands-svg-icons";
 function About() {
-  const isMobile = window.matchMedia("(max-width: 640px)").matches;
-
   const techItems = [
     { icon: faHtml5, label: "HTML5" },
     { icon: faCss3Alt, label: "CSS" },
@@ -25,15 +23,8 @@ function About() {
   ];
 
   const animateFadeUp = {
-    initial: { opacity: 0, y: "100%" },
-    whileInView: { opacity: 1, y: 0 },
-    transition: { duration: 0.7 },
-    viewport: { once: true },
-  };
-
-  const animateFadeRight = {
-    initial: { opacity: 0, x: "100%" },
-    whileInView: { opacity: 1, x: 0 },
+    initial: { opacity: 0, transform: "translateY(100%)" },
+    whileInView: { opacity: 1, transform: "translateY(0)" },
     transition: { duration: 0.7 },
     viewport: { once: true },
   };
@@ -64,13 +55,7 @@ function About() {
                 to detail.
               </motion.p>
             </div>
-            <motion.div
-              className="w-max"
-              {...animateFadeRight}
-              initial={
-                isMobile ? { opacity: 0, x: "100px" } : { opacity: 0, x: "25%" }
-              }
-            >
+            <motion.div className="w-max" {...animateFadeUp}>
               <TiltedCard
                 imageSrc={img}
                 containerHeight="300px"
@@ -89,8 +74,8 @@ function About() {
             {techItems.map((item, index) => (
               <motion.span
                 key={item.label}
-                initial={{ opacity: 0, y: "100%" }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, transform: "translateY(100%)" }}
+                whileInView={{ opacity: 1, transform: "translateY(0)" }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >

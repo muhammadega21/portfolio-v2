@@ -1,19 +1,19 @@
 import Particles from "../_Particles";
 import RotatingText from "../_RotatingText";
 import SplitText from "../_SplitText";
-import { motion } from "framer-motion";
+import { motion, transform } from "framer-motion";
 
 function Home() {
   const animateFadeUp = {
-    initial: { opacity: 0, y: "100px" },
-    whileInView: { opacity: 1, y: 0 },
+    initial: { opacity: 0, transform: "translateY(100%)" },
+    whileInView: { opacity: 1, transform: "translateY(0)" },
     transition: { duration: 0.5 },
     viewport: { once: true },
   };
 
   const animateZoomIn = {
-    initial: { opacity: 0, scale: 0 },
-    whileInView: { opacity: 1, scale: 1 },
+    initial: { opacity: 0, transform: "scale(0)" },
+    whileInView: { opacity: 1, transform: "scale(1)" },
     transition: { ease: "easeOut", duration: 0.7 },
     viewport: { once: true },
   };
