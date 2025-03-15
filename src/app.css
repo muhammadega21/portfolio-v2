@@ -17,6 +17,7 @@
   --color-background2: #191e24;
   --color-background3: #182433f3;
   --color-primary: #00cdb8;
+  --color-primary2:rgb(4, 145, 131);
   --color-textPrimary: #a6adbb;
 }
 
@@ -169,6 +170,17 @@ section {
   border-radius: 4px;
   background: #fff;
   opacity: 0.6;
+}
+
+.tech span{
+  transition: .2s ease-in-out;
+  border: 3px solid transparent;
+}
+
+.tech span:hover{
+ box-shadow: 0 6px var(--color-primary2);
+ border: 3px solid var(--color-primary2);
+ color: var(--color-primary2);
 }
 
 @keyframes fadeIn {

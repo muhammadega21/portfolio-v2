@@ -8,26 +8,13 @@ import EmailLink from "../components/layouts/_emailLink";
 
 function HomePage() {
   tabTitle("Ega | Portfolio");
+
   return (
     <>
       <Navbar />
       <main>
-        <div
-          className="absolute w-full h-[100dvh] hidden sm:block"
-          data-aos="fade-up"
-          data-aos-duration="900"
-          data-aos-easing="ease-in-out"
-        >
-          <SocialLink />
-        </div>
-        <div
-          className="absolute w-full h-[100dvh] hidden sm:block"
-          data-aos="fade-up"
-          data-aos-duration="900"
-          data-aos-easing="ease-in-out"
-        >
-          <EmailLink />
-        </div>
+        <SocialLink />
+        <EmailLink />
         <ScrollTop className="!w-[2rem] !h-[2rem] !rounded-full !bg-gray-700" />
         <Home />
         <About />

@@ -1,11 +1,22 @@
-import Aos from "aos";
-import "aos/dist/aos.css";
 import Particles from "../_Particles";
 import RotatingText from "../_RotatingText";
 import SplitText from "../_SplitText";
+import { motion } from "framer-motion";
 
 function Home() {
-  Aos.init();
+  const animateFadeUp = {
+    initial: { opacity: 0, y: "100px" },
+    whileInView: { opacity: 1, y: 0 },
+    transition: { duration: 0.5 },
+    viewport: { once: true },
+  };
+
+  const animateZoomIn = {
+    initial: { opacity: 0, scale: 0 },
+    whileInView: { opacity: 1, scale: 1 },
+    transition: { ease: "easeOut", duration: 0.7 },
+    viewport: { once: true },
+  };
   return (
     <section>
       <div className="absolute w-full h-[100dvh]">
@@ -22,12 +33,7 @@ function Home() {
       </div>
       <div className="h-screen w-max py-0 sm:py-[80px] px-[5%] sm:px-[10%] flex items-center">
         <div>
-          <div
-            className="w-max mb-4"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-          >
+          <motion.div className="w-max mb-2 sm:mb-4" {...animateZoomIn}>
             <SplitText
               text="Hi, my name is"
               className="text-sm md:text-lg text-center font-[Chivo_Mono]"
@@ -41,13 +47,8 @@ function Home() {
               threshold={0.2}
               rootMargin="-50px"
             />
-          </div>
-          <div
-            className="w-max"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-          >
+          </motion.div>
+          <motion.div className="w-max" {...animateZoomIn}>
             <SplitText
               text="Mhd. Ega Dermawan"
               className="text-[27px] sm:text-5xl lg:text-6xl font-extrabold text-center !text-wrap"
@@ -61,12 +62,10 @@ function Home() {
               threshold={0.2}
               rootMargin="-50px"
             />
-          </div>
-          <div
+          </motion.div>
+          <motion.div
             className="flex items-center gap-2 font-bold text-xl sm:text-3xl lg:text-4xl w-max "
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
+            {...animateZoomIn}
           >
             <RotatingText
               texts={["Frontend", "Backend"]}
@@ -81,12 +80,10 @@ function Home() {
               rotationInterval={2000}
             />
             <h2 className="text-gray-300">Web Developer</h2>
-          </div>
-          <div
+          </motion.div>
+          <motion.div
             className="max-w-screen w-[80%] sm:w-1/2 mt-4 overflow-hidden"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
+            {...animateZoomIn}
           >
             <SplitText
               text="I'm a junior Fullstack Web Developer passionate about creating interactive applications and experiences on the web."
@@ -98,19 +95,15 @@ function Home() {
               threshold={0.2}
               rootMargin="-50px"
             />
-          </div>
-          <div
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-          >
+          </motion.div>
+          <motion.div {...animateFadeUp}>
             <a
               className=" mybtn-outline relative mt-4 py-7 px-8 font-['Chivo_Mono'] text-base"
               href={"#project"}
             >
               Check Out My Projects
             </a>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

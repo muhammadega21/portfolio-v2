@@ -1,6 +1,13 @@
+import { motion } from "framer-motion";
 function SocialLink() {
+  const animateFadeUp = {
+    initial: { opacity: 0, y: "20%" },
+    whileInView: { opacity: 0.8, y: 0 },
+    transition: { ease: "easeOut", duration: 1 },
+    viewport: { once: true },
+  };
   return (
-    <div className="socialLink">
+    <motion.div className="socialLink" {...animateFadeUp}>
       <a href="https://github.com/muhammadega21" target="_blank">
         <i className="ri-github-line "></i>
       </a>
@@ -16,7 +23,7 @@ function SocialLink() {
       >
         <i className="ri-linkedin-fill"></i>
       </a>
-    </div>
+    </motion.div>
   );
 }
 
